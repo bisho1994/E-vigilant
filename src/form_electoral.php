@@ -217,7 +217,9 @@ if (!isset($_SESSION['csrf_token'])) {
             <label for="username">Nombre del candidato</label>
             <input type="text" id="username" name="username" list="delegado-list" style="text-transform: uppercase;" required>
             <datalist id="delegado-list">
-                <option value="ANA BELEN TAPIA VALLEJO">
+                <option value="Candidato 1">
+                <option value="Candidato 2">
+                <option value="Candidato 3">
             </datalist>
 
             <label for="numero_de_votos_totales">Votos totales del Candidato en el acta</label>
