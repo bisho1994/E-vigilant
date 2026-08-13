@@ -2,9 +2,13 @@ name: CI Pipeline - Elecciones Napo
 
 on:
   push:
-    branches: [ main, develop ]
+    branches:
+      - main
+      - develop
   pull_request:
-    branches: [ main, develop ]
+    branches:
+      - main
+      - develop
 
 jobs:
   run-php-tests:
@@ -23,7 +27,7 @@ jobs:
           php-version: '8.2'
           tools: phpunit
 
-      # 3. Instalar dependencias o validar sintaxis del proyecto
+      # 3. Validar sintaxis de archivos PHP
       - name: Validar sintaxis de archivos PHP
         run: |
           find . -name "*.php" -print0 | xargs -0 -n 1 php -l
